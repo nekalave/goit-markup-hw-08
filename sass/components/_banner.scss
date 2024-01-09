@@ -1,0 +1,43 @@
+.banner{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 200px 0;
+    text-align: center;
+    background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/banner-background.jpg');
+}
+
+.banner__title {
+    color: var(--primary-white-color);
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+    max-width: 696px;
+    margin: 0 auto 30px;
+}
+
+.banner__button {
+    color: var(--primary-white-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.96px;
+    background-color: var(--actent-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 216px;
+    height: 50px;
+    flex-shrink: 0;
+    transition: background-color 250ms var(--animation-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--actent-secundary-color);
+    }
+}
+
