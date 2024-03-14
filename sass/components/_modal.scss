@@ -25,13 +25,22 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    min-height: 581px;
-    min-width: 528px;
+    height: 581px;
+    width: 528px;
     border-radius: 4px;
     padding: 40px;
     background-color: var(--primary-white-color);
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.20), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
     transition: scale 250ms var(--animation-function);
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        width: 290px;
+        height: auto;
+        padding: 20px;
+    }
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        width: 450px;
+        height: 609px;
+    }
 }
 
 .modal-close-button {
@@ -54,6 +63,10 @@
     &:focus {
         fill: var(--actent-color);
     }
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        top: 4px;
+        right: 4px;
+    }
 }
 
 .modal__icon {
@@ -66,11 +79,15 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 23px;
     letter-spacing: 0.6px;
     margin-bottom: 12px;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (max-width: 1199px) {
+        line-height: 30px;
+    }
 }
 
 .input__wrapper {
@@ -119,13 +136,18 @@
     padding-left: 42px;
     outline: transparent;
     transition: border-color 250ms var(--animation-function);
-
     &:focus {
         border-color: var(--actent-color);
      };
      &:focus + .input__icon {
         fill: var(--actent-color);
     };
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        width: 100%;
+    }
+    @media screen and (min-width: 480px) and (max-width: 1199px){
+        width: 370px;
+    }
 }
 
 .input__icon {
@@ -155,6 +177,15 @@
     &:focus {
         border-color: var(--actent-color);
     }
+
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 1199px){
+        width: 370px;
+        font-size: 12px;
+    }
 }
 
 .modal-submit-button {
@@ -183,10 +214,6 @@
 
 .user-privacy__link {
     color: var(--actent-color);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
     letter-spacing: 0.42px;
     text-decoration-line: underline;
 }
@@ -201,6 +228,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 1199px){
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
 
 .checkbox__icon {

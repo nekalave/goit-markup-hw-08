@@ -1,14 +1,8 @@
-.customers__title{
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 1.08px;
-    margin-bottom: 50px;
-}
-
 .customers__list{
     display: flex;
+    @media screen and (min-width: 320px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+    }
 }
 
 .customers__link{
@@ -29,15 +23,49 @@
         border-color: var(--actent-color);
         color: var(--actent-color);
     }
-}
+    @media screen and (min-width: 320px) {
+        width: 130px;
+    }
 
-.customers__item {
-    &:not(:last-child) {
-        margin-right: 30px;
+    @media screen and (min-width: 480px) {
+        width: 210px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 170px;
     }
 }
 
+.customers__item {
 
+
+    @media screen and (max-width: 767px) {
+        &:nth-child(odd) {
+            margin-right: 30px;
+        }
+        &:nth-child(-n + 4) {
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+        &:not(:nth-child(3n)){
+            margin-right: 30px;
+        }
+        &:nth-child(-n + 3) {
+           margin-bottom: 30px;
+        }
+    }
+
+}
 
 .customers__icon {
     fill: currentColor;

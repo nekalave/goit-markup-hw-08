@@ -1,0 +1,136 @@
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #000;
+}
+
+.mobile-menu-nav{
+
+}
+
+.mobile-menu-nav__item {
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-menu-nav__link {
+  color: var(--primary-text-color);
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 47px;
+}
+
+.mobile-menu-nav__item .current {
+  color: var(--actent-color);
+}
+
+.mobile-menu-contacts {
+  margin-top: auto;
+}
+
+.mobile-menu-contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &:last-child {
+    margin-bottom: 64px;
+  }
+}
+
+.mobile-menu-contacts__tel {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 40px;
+    color: var(--actent-color);
+  @media screen and (min-width:320px) and (max-width: 479px){
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.mobile-menu-contacts__mail {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    color: (var(--secundary-text-color));
+}
+
+.mobile-menu-socials {
+  display: flex;
+  flex-direction: row;
+  @media screen and (min-width:320px) and (max-width: 479px){
+    flex-wrap: wrap;
+  }
+}
+
+.mobile-menu-socials__item {
+  @media screen and (min-width:320px) and (max-width: 479px){
+    &:nth-child(-n + 2) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.mobile-menu-socials__link {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--actent-color);
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.mobile-menu-socials__separator {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  margin-right: 10px;
+}
