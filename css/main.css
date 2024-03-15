@@ -1380,7 +1380,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .projects__item {
-    width: 450px;
+    max-width: 450px;
   }
   .projects__item:not(:last-child) {
     margin-bottom: 30px;
