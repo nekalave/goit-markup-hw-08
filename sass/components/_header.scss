@@ -151,29 +151,3 @@
         height: 14px;
     }
 }
-
-.mobile-menu-close-button {
-    fill: #000000;
-    width: 18px;
-    height: 18px;
-    transition: fill 250ms var(--animation-function);
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-        fill: var(--actent-color);
-    }
-}
-
-.mobile-menu-open-button {
-    fill: #000000;
-    width: 24px;
-    height: 24px;
-    transition: fill 250ms var(--animation-function);
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-        fill: var(--actent-color);
-    }
-}

@@ -246,28 +246,6 @@ body {
   }
 }
 
-.mobile-menu-close-button {
-  fill: #000000;
-  width: 18px;
-  height: 18px;
-  transition: fill 250ms var(--animation-function);
-  cursor: pointer;
-}
-.mobile-menu-close-button:hover, .mobile-menu-close-button:focus {
-  fill: var(--actent-color);
-}
-
-.mobile-menu-open-button {
-  fill: #000000;
-  width: 24px;
-  height: 24px;
-  transition: fill 250ms var(--animation-function);
-  cursor: pointer;
-}
-.mobile-menu-open-button:hover, .mobile-menu-open-button:focus {
-  fill: var(--actent-color);
-}
-
 .menu-toggle {
   min-height: 40px;
   min-width: 40px;
@@ -281,6 +259,10 @@ body {
   border: none;
   border-radius: 50%;
   outline: none;
+  transition: fill 250ms var(--animation-function);
+}
+.menu-toggle:hover, .menu-toggle:focus {
+  fill: var(--actent-color);
 }
 
 @media (min-width: 768px) {
@@ -288,11 +270,6 @@ body {
     display: none;
   }
 }
-.menu-toggle:hover,
-.menu-toggle:focus {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .menu-container {
   position: fixed;
   top: 0;
@@ -1393,8 +1370,14 @@ body {
 .projects__list {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 
+.projects__item {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (max-width: 767px) {
   .projects__item {
     width: 450px;
@@ -1427,7 +1410,9 @@ body {
 }
 
 .project__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   transition: box-shadow 250ms var(--animation-function);
 }
 .project__link:hover {
@@ -1479,6 +1464,7 @@ body {
   background-color: var(--primary-white-color);
   border: 1px solid #EEE;
   border-top: none;
+  flex-grow: 1;
 }
 
 .project__type {
