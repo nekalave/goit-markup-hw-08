@@ -229,10 +229,20 @@
     align-items: center;
     justify-content: center;
 
-    @media screen and (max-width: 1199px){
+    @media screen and (max-width: 479px){
+        display: flex;
+        font-size: 11px;
+        line-height: 14px;
+    }
+    @media screen and (min-width: 480px) and (max-width: 1199px){
         font-size: 12px;
         line-height: 14px;
     }
+}
+
+.user-privacy-title-box {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .checkbox__icon {

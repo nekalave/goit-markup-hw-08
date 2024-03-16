@@ -1,10 +1,7 @@
 .menu-toggle {
   min-height: 40px;
   min-width: 40px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  margin: 0;
+  margin-left: auto;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
@@ -108,17 +105,10 @@
 .mobile-menu-socials {
   display: flex;
   flex-direction: row;
-  @media screen and (min-width:320px) and (max-width: 479px){
-    flex-wrap: wrap;
-  }
 }
 
 .mobile-menu-socials__item {
-  @media screen and (min-width:320px) and (max-width: 479px){
-    &:nth-child(-n + 2) {
-      margin-bottom: 10px;
-    }
-  }
+
 }
 
 .mobile-menu-socials__link {
@@ -128,6 +118,10 @@
   color: var(--actent-color);
   &:not(:last-child) {
     margin-right: 10px;
+  }
+  @media screen and (min-width:320px) and (max-width: 479px){
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 
